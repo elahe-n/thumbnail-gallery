@@ -8,37 +8,28 @@ let imgOne = document.querySelector(`.one`)
 let imgTwo = document.querySelector(`.two`)
 let imgThree = document.querySelector(`.three`)
 
-
-let setThumbOneToImg = function() {
+let setThumbToImg = function(theThumbnail) {
   // Store the url from the image that was clicked
-  let newSrcUrl = imgOne.getAttribute(`src`)
-  let newAltTxt = imgOne.getAttribute(`alt`)
+  let newSrcUrl = theThumbnail.getAttribute(`src`)
+  let newAltTxt = theThumbnail.getAttribute(`alt`)
 
   // Set the url from the thumb to the big image
   theBigImg.setAttribute(`src`, newSrcUrl)
   theBigImg.setAttribute(`alt`, newAltTxt)
+}
+
+
+let setThumbOneToImg = function() {
+  setThumbToImg(imgOne)
 }
 
 let setThumbTwoToImg = function() {
-  // Store the url from the image that was clicked
-  let newSrcUrl = imgTwo.getAttribute(`src`)
-  let newAltTxt = imgTwo.getAttribute(`alt`)
-
-  // Set the url from the thumb to the big image
-  theBigImg.setAttribute(`src`, newSrcUrl)
-  theBigImg.setAttribute(`alt`, newAltTxt)
+  setThumbToImg(imgTwo)
 }
 
 let setThumbThreeToImg = function() {
-  // Store the url from the image that was clicked
-  let newSrcUrl = imgThree.getAttribute(`src`)
-  let newAltTxt = imgThree.getAttribute(`alt`)
-
-  // Set the url from the thumb to the big image
-  theBigImg.setAttribute(`src`, newSrcUrl)
-  theBigImg.setAttribute(`alt`, newAltTxt)
+  setThumbToImg(imgThree)
 }
-
 
 // Train the images to set the url for the big image WHEN they hear a click
 imgOne.addEventListener(`click`, setThumbOneToImg)
