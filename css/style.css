@@ -1,0 +1,13 @@
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
+  max-width: 60em;
+  margin: 1em auto;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+}
+
+.bigimg {
+  grid-row: 1;
+  grid-column: 1 / span 3;
+}
