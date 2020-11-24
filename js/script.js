@@ -19,19 +19,47 @@ let setThumbToImg = function(theThumbnail) {
 }
 
 
-let setThumbOneToImg = function() {
-  setThumbToImg(imgOne)
-}
-
-let setThumbTwoToImg = function() {
-  setThumbToImg(imgTwo)
-}
-
-let setThumbThreeToImg = function() {
-  setThumbToImg(imgThree)
-}
 
 // Train the images to set the url for the big image WHEN they hear a click
-imgOne.addEventListener(`click`, setThumbOneToImg)
-imgTwo.addEventListener(`click`, setThumbTwoToImg)
-imgThree.addEventListener(`click`, setThumbThreeToImg)
+imgOne.addEventListener(`click`, function() {
+  setThumbToImg(imgOne)
+})
+imgTwo.addEventListener(`click`, function() {
+  setThumbToImg(imgTwo)
+})
+imgThree.addEventListener(`click`, function() { 
+  setThumbToImg(imgThree) 
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
